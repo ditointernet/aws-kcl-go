@@ -53,7 +53,7 @@ type mavenPackageInfo struct {
 func (pkg *mavenPackageInfo) URL() string {
 	paths := strings.Split(pkg.Group, ".")
 	paths = append(paths, pkg.Artifact, pkg.Version, pkg.Name())
-	return "http://search.maven.org/remotecontent?filepath=" + strings.Join(paths, "/")
+	return "https://repo1.maven.org/maven2/" + strings.Join(paths, "/")
 }
 
 func (pkg *mavenPackageInfo) Name() string {
